@@ -112,7 +112,6 @@ An AI agent, built on IBM Cloud, that connects to household energy data. Using a
 [![Building the Agent](https://img.youtube.com/vi/5fXR15PDv6k/hqdefault.jpg)](https://www.youtube.com/watch?v=5fXR15PDv6k)
 
 ---
----
 
 ## 📌 How to Run or Deploy
 
