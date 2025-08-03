@@ -5,7 +5,7 @@ An AI-powered assistant that acts as your personal electricity manager. Built us
 
 ---
 
-![ai](ai.jpg)
+![ai](./Assets/ai.png)
 
 ---
 
