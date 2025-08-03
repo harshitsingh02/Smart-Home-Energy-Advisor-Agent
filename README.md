@@ -108,6 +108,7 @@ An AI agent, built on IBM Cloud, that connects to household energy data. Using a
 
 ## Recordings(watch to build on your own)
 ▶️ [Building, Testing & Deployment](https://youtu.be/5fXR15PDv6k)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5fXR15PDv6k?si=9WHr4Mg_4D8__Hwa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 
