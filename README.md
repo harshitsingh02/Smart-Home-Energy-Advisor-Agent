@@ -85,18 +85,24 @@ An AI agent, built on IBM Cloud, that connects to household energy data. Using a
 ## 🖼️ Screenshots
 ###🔹 Setting up..
 ![Setup & preview image](./Assets/setup.png)
+
 ###🔹 Agent Instructions...
 ![Agent Instructions](./Assets/agent_instructions.png)
+
 ###🔹 Adding the Energy Data via Vector Index...
 ![quick_start_questions](./Assets/quick_start_questions.png)
+
 ###🔹 Tools used & Testing...
 ![Tool Used & Testing](./Assets/tool_testing.png)
+
 ###🔹 Deployment & Preview...
 ![Deployment & Testing](./Assets/deployed.png)
+
 ###🔹 API References after Deployment...
 ![api _references](./Assets/links.png)
+
 ###🔹 Resources List...
-![resourses_list.jpg](./Assets/resourses_list.png)
+![resourses_list.jpg](./Assets/resources_list.png)
 
 ---
 
