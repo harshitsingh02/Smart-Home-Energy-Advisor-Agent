@@ -1,6 +1,3 @@
-Okay, I can generate a `TECHNICAL_DOCUMENTATION.md` file for your PPX PO Gen project based on the provided code files and the structure of the example documentation.
-
-```markdown
 # PPX PO Gen - Automated Accounts Payable System - Technical Documentation
 
 ## 📋 Table of Contents
@@ -16,13 +13,8 @@ Okay, I can generate a `TECHNICAL_DOCUMENTATION.md` file for your PPX PO Gen pro
 9.  [Testing & Deployment](#testing--deployment)
 10. [Conclusion](#conclusion)
 
----
 
 ## 🏗️ System Architecture
-
-The PPX PO Gen system is a full-stack web application designed to automate the process of converting uploaded invoices into editable Purchase Orders (POs) using AI for data extraction.
-
-```
 
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           Frontend (Vue 3 / Vite)                           │
@@ -62,8 +54,6 @@ The PPX PO Gen system is a full-stack web application designed to automate the p
 │ (OCR Extraction)│ │  (Uploads)    │
 └─────────────────┘ └───────────────┘
 
-````
-
 ### Technology Stack
 
 **Backend:**
@@ -100,7 +90,7 @@ The PPX PO Gen system is a full-stack web application designed to automate the p
 - **Docker**: Platform for developing, shipping, and running applications in containers
 - **Docker Compose**: Tool for defining and running multi-container Docker applications
 
----
+ 
 
 ## 🔧 Backend Components
 
@@ -164,7 +154,7 @@ The PPX PO Gen system is a full-stack web application designed to automate the p
 **Purpose**: Verifies JWT tokens for protected routes.
 **Logic**: Extracts the token from the `x-auth-token` header, verifies it using `JWT_SECRET`, and attaches the decoded user payload (`req.user`) to the request object if valid. Returns 401 Unauthorized if the token is missing or invalid.
 
----
+ 
 
 ## ⚙️ OCR Service Components
 
@@ -195,7 +185,7 @@ The PPX PO Gen system is a full-stack web application designed to automate the p
     - Calls `process_invoice` for each valid job.
     - Includes error handling for Redis connection issues and invalid job formats. Ensures DB/Redis connections are active before processing.
 
----
+ 
 
 ## 🎨 Frontend Components
 
@@ -286,7 +276,7 @@ The PPX PO Gen system is a full-stack web application designed to automate the p
 
 **Purpose**: Defines the list of available PO template names used in the `POEditor` dropdown and for dynamic component loading.
 
----
+ 
 
 ## 📊 Data Flow & API Endpoints
 
@@ -392,7 +382,7 @@ The PPX PO Gen system is a full-stack web application designed to automate the p
 - **`GET /health`**: Basic health check endpoint.
     - Response: String `Backend Server is running`.
 
----
+ 
 
 ## 🧠 Component Logic Explanation
 
@@ -419,7 +409,7 @@ The PPX PO Gen system is a full-stack web application designed to automate the p
     - **PDF/Word**: Computed properties `pdfUrl` and `wordUrl` construct the backend download URLs (`/api/generate/.../:id`), appending the auth token from `localStorage` as a query parameter (`?token=...`). These URLs are used in standard `<a>` tag `href` attributes.
     - **PNG**: The `downloadPNG` function uses `html2canvas` to render the DOM element referenced by `poViewRef` onto a canvas. It gets the canvas data URL (`toDataURL('image/png')`), creates a temporary link element (`<a>`), sets its `href` to the data URL and `download` attribute to a filename, programmatically clicks the link, and then removes it.
 
----
+ 
 
 ## 🤖 AI Integration (Perplexity OCR)
 
@@ -446,7 +436,7 @@ The core AI functionality is handled by the dedicated Python OCR service (`ppx-o
 -   **Prompt Context**: The prompt itself is generic and provides the desired JSON structure but does not include user-specific data beyond the file's MIME type.
 -   **Data Storage**: The extracted data, which may contain sensitive details from the invoice, is stored within the `Invoice` document in the MongoDB database.
 
----
+ 
 
 ## 🚀 Local Development Setup
 
@@ -507,7 +497,7 @@ The core AI functionality is handled by the dedicated Python OCR service (`ppx-o
 -   **Frontend**: Navigate to `frontend/`, set up `.env` (ensure `VITE_API_BASE_URL` points to backend), run `npm install`, then `npm run dev` (uses Vite dev server).
 -   **OCR Service**: Navigate to `ppx-ocr-service/`, set up `.env` (adjust `MONGO_URI` and `REDIS_HOST` if needed), set up Python environment (`python -m venv venv`, `source venv/bin/activate`, `pip install -r requirements.txt`), run `python main.py`. Requires MongoDB and Redis running separately.
 
----
+ 
 
 ## 🧪 Testing & Deployment
 
@@ -567,7 +557,7 @@ The core AI functionality is handled by the dedicated Python OCR service (`ppx-o
 -   **OCR Service**: Uses Python's built-in `logging` module configured for INFO level, logging connection attempts, job reception, API calls, status updates, and errors.
 -   **Frontend**: Uses `console.log` and `console.error` for debugging. Consider integrating a frontend error tracking service (e.g., Sentry) for production.
 
----
+ 
 
 ## 📝 Conclusion
 
@@ -594,6 +584,3 @@ The PPX PO Gen system provides a streamlined workflow for automating Accounts Pa
 
 The system provides a solid foundation for AP automation, significantly reducing manual effort in PO creation by leveraging AI for initial data capture.
 
----
-*Documentation generated based on provided source code files.*
-````
